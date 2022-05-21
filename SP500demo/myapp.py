@@ -62,7 +62,6 @@ if(indicator == 'RSI'):
     st.line_chart(tickerDf['RSI_' + str(rsi_len)])
 elif(indicator == 'MACD'):
     tickerDf.ta.macd(append=True)
-    print(list(tickerDf))
     st.subheader('Moving Average Convergence Divergence (MACD)')
     
     figMACD = make_subplots(rows=2, cols=1,
