@@ -11,14 +11,8 @@ import numpy as np
 import time
 
 st.write("""
-# UP or DOWN!? BTC 亞洲盤
+# UP or DOWN!? Binance 亞洲盤
 """)
-
-symbols = ['BTCUSDT']
-
-ticker = st.sidebar.selectbox(
-    'Choose a coin',
-     symbols)  
 
 api_key = ""
 api_secret = ""
@@ -28,6 +22,12 @@ client = Client(api_key, api_secret)
 low = 0
 high = 0
 price = 0
+
+info = client.futures_exchange_info()
+symbols = [x['symbol'] for x in info['symbols']]
+
+ticker = st.sidebar.selectbox(
+    'Choose a coin',symbols) 
 
 
 placeholder1 = st.empty()
