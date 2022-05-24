@@ -47,7 +47,7 @@ while True:
         low1.subheader('Bet to 24H Low!')
         high1.subheader('Bet to 24H High!')
         with price1:
-            st.write(f'<p style="color:#fff;font-size:36px;border-radius:2%;">'+str(price)+'</p>', unsafe_allow_html=True)
+            st.write(f'<p style="font-size:36px;border-radius:2%;">'+str(price)+'</p>', unsafe_allow_html=True)
         with low1:
             st.write(f'<p style="color:#de0d0d;font-size:24px;border-radius:2%;">'+str(low)+'</p>', unsafe_allow_html=True)
             st.write(f'<p style="color:#de0d0d;font-size:36px;border-radius:2%;"> 1賠'+str(low_odd)+'</p>', unsafe_allow_html=True)
