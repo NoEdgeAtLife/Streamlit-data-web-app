@@ -1,17 +1,10 @@
-import yfinance as yf
 import streamlit as st
-import pandas as pd
-import pandas_ta as ta
-import datetime as dt
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-import json
 from binance import Client
 import numpy as np
 import time
 
 st.write("""
-# UP or DOWN!? Binance 亞洲盤
+# UP or DOWN!? Binance Casino
 """)
 
 api_key = ""
@@ -50,7 +43,7 @@ while True:
             st.write(f'<p style="font-size:36px;border-radius:2%;">'+str(price)+'</p>', unsafe_allow_html=True)
         with low1:
             st.write(f'<p style="color:#de0d0d;font-size:24px;border-radius:2%;">'+str(low)+'</p>', unsafe_allow_html=True)
-            st.write(f'<p style="color:#de0d0d;font-size:36px;border-radius:2%;"> 1賠'+str(low_odd)+'</p>', unsafe_allow_html=True)
+            st.write(f'<p style="color:#de0d0d;font-size:36px;border-radius:2%;"> Odd: 1:'+str(low_odd)+'</p>', unsafe_allow_html=True)
         with high1: 
             st.write(f'<p style="color:#1de612;font-size:24px;border-radius:2%;">'+str(high)+'</p>', unsafe_allow_html=True)
-            st.write(f'<p style="color:#1de612;font-size:36px;border-radius:2%;"> 1賠'+str(high_odd)+'</p>', unsafe_allow_html=True)
+            st.write(f'<p style="color:#1de612;font-size:36px;border-radius:2%;"> Odd: 1:'+str(high_odd)+'</p>', unsafe_allow_html=True)
