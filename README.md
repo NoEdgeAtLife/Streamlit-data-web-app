@@ -1,5 +1,7 @@
 # Streamlit-data-web-app
 
+#streamlit run myapp.py
+
 Visualise and Deploy Web Apps by **Streamlit**, illstrated in several examples:
 
 1. S&P 500 Data
